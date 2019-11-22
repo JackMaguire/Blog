@@ -1,4 +1,4 @@
-# Nov 22, 2019
+Nov 22, 2019
 
 # Description
 
@@ -137,6 +137,8 @@ static void Vector1(benchmark::State& state) {
 BENCHMARK( Vector1 );
 ```
 
+![test1.png](test1.png)
+
 # Test 2
 
 This test is a more concise. Just read and increment a value at a position that is not known at compile time.
@@ -191,3 +193,5 @@ static void Vector1(benchmark::State& state) {
 BENCHMARK( Vector1 );
 
 ```
+
+![test2.png](test2.png)
