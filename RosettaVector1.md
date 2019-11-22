@@ -66,6 +66,14 @@ It turns out that `vectorL< 1 >` is as-fast or faster than `std::vector` accross
 Since my plan had a theoretical access speed identical to `std::vector`,
 I did not bother implementing it after seeing these results.
 
+See below for a description of the tests.
+These plots are from quick-bench.com using `gcc-8.1` and `c++14`
+but other compilers and c++ versions matched these results.
+
+![test1.png](test1.png)
+
+![test2.png](test2.png)
+
 ## Test Setup
 
 There's a lot of code that precedes the tests, which I dumped here: https://godbolt.org/z/_mpFQg
