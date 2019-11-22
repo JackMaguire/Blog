@@ -137,8 +137,10 @@ static void Vector1(benchmark::State& state) {
 
   // Code inside this loop is measured repeatedly
   for (auto _ : state) {
-    int j = ++(*v1)[ values[10] ];
-    benchmark::DoNotOptimize(j);
+    for( uint i : values ){
+      int j = (*v1)[ i ];
+      benchmark::DoNotOptimize(j);
+    }
   }
 }
 // Register the function as a benchmark
