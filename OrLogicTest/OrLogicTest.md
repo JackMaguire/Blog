@@ -100,3 +100,21 @@ Instead, it looks like the single-`|` option is simply more vectorizable than th
 Most compilers gave equal benchmark times.
 Between this test and Matt's test (https://www.youtube.com/watch?v=HG6c4Kwbv4I, skip to final 15 minutes),
 single-`|` is rarely better than double-`||` but it is significantly better when it is.
+
+### Appendix A
+
+Most people would probably write their code more like this:
+```c++
+inline
+int number_of_values_in_window3( num_array const & arr ){
+  int count = 0;
+  for( float f : arr ){
+    if( f >= 0.45 && f <= 0.55 ) ++count;
+  }
+  return count;
+}
+```
+
+I threw that into the mix as the "And" test and it was equivalent to "Normal" (renamed "DoubleOr"):
+
+![SI.png](SI.png)
