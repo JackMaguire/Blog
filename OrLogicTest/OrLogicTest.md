@@ -136,6 +136,6 @@ Interestingly, this is what happens when you update to `gcc-7.5` (still using `c
 
 ![SI3.png](SI3.png)
 
-Meanwhile, in `clang-9.0`:
+Meanwhile, `clang-9.0` is slower than gcc by a hair but nearly equal accross the three tests:
 
 ![SI4.png](SI4.png)
