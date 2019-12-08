@@ -84,11 +84,11 @@ confused the CPU's branch predictor. Booleans/conditions `a` and `b` are individ
 but `a || b` is overwhelmingly likely.
 When obfuscated by more advanced logic, the compiler might consider `a` and `b` as different branches, such as:
 ```c++
-  for( float f : arr ){
-    if( f < 0.45 ) continue;
-    if( f > 0.55 ) continue;
-    ++count;
-  }
+for( float f : arr ){
+  if( f < 0.45 ) continue; // unlikely
+  if( f > 0.55 ) continue; // unlikely (Though it would be likely given the results of the first branch. That's one thing I didn't fully understand from Matt's talk)
+  ++count;
+}
 ```
 
 Based on the assembly (https://godbolt.org/z/mJJu5v),
