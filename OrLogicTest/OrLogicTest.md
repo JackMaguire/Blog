@@ -127,3 +127,11 @@ int number_of_values_in_window3( num_array const & arr ){
 I threw that into the mix as the "And" test and it was equivalent to "Normal" (renamed "DoubleOr"):
 
 ![SI.png](SI.png)
+
+Interestingly, this is what happens when you update to `gcc-7.5` (still using `c++11` and `-O3`):
+
+![SI2.png](SI2.png)
+
+... and `gcc-9.2`:
+
+![SI3.png](SI3.png)
