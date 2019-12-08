@@ -1,3 +1,3 @@
 # Blog
 
-!(OrLogicTest)[OrLogicTest/OrLogicTest.md]
+![OrLogicTest](OrLogicTest/OrLogicTest.md)
