@@ -3,7 +3,7 @@ Dec 8, 2019
 # Description
 
 Matt Godbolt gave an interesting example of how conditional branches can be optimized by using `if( a | b )` in place of `if( a || b )`:
-https://www.youtube.com/watch?v=HG6c4Kwbv4I
+https://www.youtube.com/watch?v=HG6c4Kwbv4I (skip to final 15 minutes)
 
 I thought I would play around with a simple example here.
 
@@ -94,3 +94,9 @@ for( float f : arr ){
 Based on the assembly (https://godbolt.org/z/mJJu5v),
 I think my case is too simple to trip up the branch-predictor like that.
 Instead, it looks like the single-`|` option is simply more vectorizable than the double-`||` option.
+
+# Summary
+
+Most compilers gave equal benchmark times.
+Between this test and Matt's test (https://www.youtube.com/watch?v=HG6c4Kwbv4I, skip to final 15 minutes),
+single-`|` is rarely better than double-`||` but it is significantly better when it is.
