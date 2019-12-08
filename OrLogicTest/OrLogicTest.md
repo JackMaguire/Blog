@@ -135,3 +135,7 @@ Interestingly, this is what happens when you update to `gcc-7.5` (still using `c
 ... and `gcc-9.2`:
 
 ![SI3.png](SI3.png)
+
+Meanwhile, in `clang-9.0`:
+
+![SI4.png](SI4.png)
