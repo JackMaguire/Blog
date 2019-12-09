@@ -2,7 +2,7 @@ Dec 8, 2019
 
 # Description
 
-Matt Godbolt gave an interesting example of how conditional branches can be optimized by using `if( a | b )` in place of `if( a || b )`:
+Matt Godbolt gave an interesting example of how if-statements can be optimized by using `if( a | b )` in place of `if( a || b )`:
 https://www.youtube.com/watch?v=HG6c4Kwbv4I (skip to final 15 minutes)
 
 I thought I would play around with a simple example here.
