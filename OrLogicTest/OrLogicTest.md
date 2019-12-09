@@ -45,6 +45,7 @@ int number_of_values_in_window2( num_array const & arr ){
   return count;
 }
 
+//"Normal" means "if( a || b )"
 static void Normal(benchmark::State& state) {
   auto n = generate();
   // Code inside this loop is measured repeatedly
@@ -56,6 +57,7 @@ static void Normal(benchmark::State& state) {
 // Register the function as a benchmark
 BENCHMARK(Normal);
 
+//"Test" means "if( a | b )"
 static void Test(benchmark::State& state) {
   auto n = generate();
   // Code inside this loop is measured repeatedly
